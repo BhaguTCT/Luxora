@@ -1,0 +1,9 @@
+// _components.scss
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+.button {
+  @include button($gray-dark, $white);
+}
+
