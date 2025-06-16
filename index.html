@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Luxora - Home Page</title>
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header desktop-header">
+        <nav class="nav">
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="#about">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="#footer">Contact Us</a>
+            </div>
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="static/images/logo/Luxora.png" alt="Luxora Logo" />
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <div class="searchicon"></div>
+                <div class="usericon"></div>
+                <div class="carticon"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Header -->
+    <header class="header mobile-header">
+        <nav class="nav">
+            <!-- Hamburger Menu (Toggles with JS) -->
+            <div class="hamburger" id="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Logo (Hidden when menu opens) -->
+            <div class="logo" id="logo">
+                <a href="#">
+                    <img src="static/images/logo/Luxora.png" alt="Luxora Logo" />
+                </a>
+            </div>
+
+            <!-- Cart Icon (Hidden when menu opens) -->
+            <div class="carticon" id="cart-icon"></div>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar Menu -->
+    <div class="mobile-nav" id="mobile-menu">
+        <ul class="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+
+        <!-- Bottom Icons (Search & Account) -->
+        <div class="bottom-menu">
+            <div class="menu-item">
+                <span class="searchicon"></span>
+                <span class="label">Search</span>
+            </div>
+            <div class="divider"></div>
+            <div class="menu-item">
+                <span class="usericon"></span>
+                <span class="label">Account</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section with Parallax Effect -->
+    <section class="hero" id="top"></section>
+
+    <div class="slider">
+        <div class="slide-track">
+            <div class="slide"><img src="static/images/7.png" alt="Image 1" /></div>
+            <div class="slide"><img src="static/images/8.png" alt="Image 2" /></div>
+            <div class="slide"><img src="static/images/9.png" alt="Image 3" /></div>
+            <div class="slide">
+                <img src="static/images/10.png" alt="Image 4" />
+            </div>
+            <div class="slide">
+                <img src="static/images/11.png" alt="Image 5" />
+            </div>
+            <div class="slide"><img src="static/images/7.png" alt="Image 6" /></div>
+            <div class="slide"><img src="static/images/8.png" alt="Image 7" /></div>
+
+            <!-- Duplicate images to ensure infinite scroll effect -->
+            <div class="slide"><img src="static/images/9.png" alt="Image 8" /></div>
+            <div class="slide">
+                <img src="static/images/10.png" alt="Image 9" />
+            </div>
+            <div class="slide">
+                <img src="static/images/11.png" alt="Image 10" />
+            </div>
+            <div class="slide">
+                <img src="static/images/7.png" alt="Image 11" />
+            </div>
+            <div class="slide">
+                <img src="static/images/8.png" alt="Image 12" />
+            </div>
+        </div>
+    </div>
+
+    <!-- feature section -->
+    <section class="featured-collection">
+        <h3>Featured Collection</h3>
+        <h2>The Afterglow Collection</h2>
+
+        <div class="collection-wrapper">
+            <div class="collection-slider">
+                <div class="collection-item">
+                    <div class="image-container">
+                        <img src="static/images/item1.png" alt="Formal Trouser" class="default-img" />
+                        <img src="static/images/item1-hover.png" alt="Formal Trouser Hover" class="hover-img" />
+                    </div>
+                    <div class="product-details">
+                        <p class="brand">TFG</p>
+                        <div class="details">
+                            <p class="title">Formal Trouser</p>
+                            <p class="price">$199</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-item">
+                    <div class="image-container">
+                        <img src="static/images/item2.png" alt="Jacket" class="default-img" />
+                        <img src="static/images/item2-hover.png" alt="Jacket Hover" class="hover-img" />
+                    </div>
+                    <div class="product-details">
+                        <p class="brand">TFG</p>
+                        <div class="details">
+                            <p class="title">Jacket</p>
+                            <p class="price">$299</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-item">
+                    <div class="image-container">
+                        <img src="static/images/item3.png" alt="Tops" class="default-img" />
+                        <img src="static/images/item3-hover.png" alt="Tops Hover" class="hover-img" />
+                    </div>
+                    <div class="product-details">
+                        <p class="brand">TFG</p>
+                        <div class="details">
+                            <p class="title">Tops</p>
+                            <p class="price">$149</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collection-item">
+                    <div class="image-container">
+                        <img src="static/images/item4.png" alt="Knitted Top" class="default-img" />
+                        <img src="static/images/item4-hover.png" alt="Knitted Top Hover" class="hover-img" />
+                    </div>
+                    <div class="product-details">
+                        <p class="brand">TFG</p>
+                        <div class="details">
+                            <p class="title">Knitted Top</p>
+                            <p class="price">$299</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content container">
+        <div id="about">
+            <h2 class="about-title">About Luxora</h2>
+            <div class="about-banner">
+                <p>
+                    At Luxora, we believe that fashion is more than just clothing – it’s
+                    a way to express your unique story. Our brand is built on the values
+                    of elegance, comfort, and individuality, creating timeless pieces
+                    that resonate with your lifestyle. Each Luxora design is crafted
+                    with meticulous attention to detail, blending premium fabrics with
+                    contemporary styles to ensure you feel confident and stylish.
+                    Whether you're dressing up for a special occasion or embracing
+                    everyday chic, Luxora offers versatile collections that celebrate
+                    your personal style.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- video -->
+    <section class="video-banner">
+        <div class="video-container">
+            <video id="banner-video" muted disablePictureInPicture controlsList="nodownload">
+                <source src="https://www.youtube.com/watch?v=LXb3EKWsInQ" type="video/mp4" />
+            </video>
+        </div>
+    </section>
+
+    <!-- Photo Grid -->
+    <section class="container">
+        <div class="gallery">
+            <div class="column">
+                <div class="gallery-item">
+                    <img src="static/images/Card1.png" alt="Dress" />
+                    <div class="overlay">
+                        <h1>Dress</h1>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="static/images/Card2.png" alt="Jacket" />
+                    <div class="overlay">
+                        <h1>Jacket</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="gallery-item">
+                    <img src="static/images/Card3.png" alt="Tops" />
+                    <div class="overlay">
+                        <h1>Tops</h1>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="static/images/Card4.png" alt="Skirt" />
+                    <div class="overlay">
+                        <h1>Skirt</h1>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="static/images/Card5.png" alt="Trousers" />
+                    <div class="overlay">
+                        <h1>Trousers</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="gallery-item">
+                    <img src="static/images/Card6.png" alt="Gowns" />
+                    <div class="overlay">
+                        <h1>Gowns</h1>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <!-- <img src="static/images/Card7.png" alt="Jumpsuits"> -->
+                    <picture>
+                        <source srcset="static/images/Card7.png" media="(max-width: 768px)" />
+                        <source srcset="static/images/Card7.png" media="(min-width: 769px)" />
+                        <img src="static/images/Card7.png" alt="Dress" />
+                    </picture>
+
+                    <div class="overlay">
+                        <h1>Jumpsuits</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog section -->
+    <section class="journal container">
+        <h2 class="our_journal">Latest from our Journal</h2>
+        <div class="journal-container">
+            <div class="journal-item">
+                <a href="blog.html">
+                    <img src="static/images/blog1.png" alt="Elevate Your Wardrobe" />
+                    <h4>Elevate Your Wardrobe: Mu...</h4>
+                </a>
+            </div>
+            <div class="journal-item">
+                <a href="blog.html">
+                    <img src="static/images/blog2.png" alt="The Art of Layering" />
+                    <h4>The Art of Layering: Tips to...</h4>
+                </a>
+            </div>
+            <div class="journal-item">
+                <a href="blog.html">
+                    <img src="static/images/blog3.png" alt="Behind the Seams" />
+                    <h4>Behind the Seams: The Stor...</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="container">
+        <div id="footer">
+            <div class="newsletter">
+                <h5>Subscribe To Our Newsletter</h5>
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Email" />
+                    <button>→</button>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <span class="instragramicon"></span>
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <span class="facebookicon"></span>
+                    </a>
+                    <a href="https://x.com/i/flow/login" target="_blank">
+                        <span class="twittericon"></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <div class="links-group">
+                    <div class="quick-links">
+                        <h6>Quick Links</h6>
+                        <ul>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="blog.html">Blogs</a></li>
+                            <li><a href="#">Category</a></li>
+                        </ul>
+                    </div>
+                    <div class="company">
+                        <h6>Company</h6>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="brand logo">
+                <a href="#top">
+                    <img src="static/images/logo/Luxora.png" alt="Logo" />
+                </a>
+            </div>
+            <p class="copyright">© 2025-2026 | All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="client/js/script.js"></script>
+</body>
+
+</html>
