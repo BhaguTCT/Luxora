@@ -1,0 +1,207 @@
+@use '../base/fonts'as *;
+@use '../base/variables'as *;
+
+// fade in sliding animation on page scroll
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); // Smooth easing
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+// Blog Container
+.blog-container {
+  width: $container-width;
+  margin: 140px $default-margin 26px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 100px $default-margin 26px;
+  }
+
+  .publisher-details {
+    margin: 26px auto;
+  }
+
+  p,
+  ul,
+  ol {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  // Main Banner
+  .main-banner {
+    margin: 74px auto 60px;
+
+    @media (max-width: 768px) {
+      margin: 52px auto 50px;
+    }
+  }
+
+  // Blog Content & Why Pink Section
+  .blog-content,
+  .why-pink {
+    margin: auto 22px;
+
+    @media (max-width: 768px) {
+      margin: auto $mobile-padding;
+    }
+  }
+
+  ul,
+  ol {
+    padding: 0 22px;
+  }
+
+  // Blog Banner
+  .blog_banner_main {
+    padding: 120px 100px 58px;
+
+    @media (max-width: 768px) {
+      padding: 166px $mobile-padding 66px;
+    }
+  }
+
+  button {
+    font-family: 'Futura', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: $font-regular;
+    padding: 10px 26px;
+    border: 1px solid $button-border;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 40px auto 32px;
+  }
+
+  // Latest News Section
+  .latest-news {
+    margin: $default-margin;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      padding: 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: calc(100% - 40px);
+      height: 2px;
+      background: $border-color;
+      margin: 60px auto;
+
+      @media (max-width: 768px) {
+        width: calc(100% - 60px);
+        justify-self: center;
+      }
+    }
+
+    // Latest News Title
+    .latest-news-title {
+      margin: 74px auto 52px;
+      padding-top: 34px;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        margin: 55px auto 52px;
+      }
+    }
+
+    // News Item
+    .news-item {
+      display: flex;
+      align-items: center;
+      gap: $default-gap;
+      padding: 30px 0;
+      position: relative;
+
+      img {
+        width: 127px;
+        height: auto;
+
+        @media (max-width: 768px) {
+          width: 127px;
+        }
+      }
+
+      span {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: $font-regular;
+        color: $secondary-text-color;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: $border-color;
+        margin: 30px 0;
+      }
+
+      h5 {
+        @media (max-width: 768px) {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+
+  // Blog Header
+  .blog-header {
+    text-align: center;
+    background: transparent;
+
+    @media (max-width: 768px) {
+      padding: $mobile-padding;
+    }
+
+    h1 {
+      @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  // Social Icons
+  .social-icons span {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+  }
+}

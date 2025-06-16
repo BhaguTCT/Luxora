@@ -1,0 +1,24 @@
+@use 'variables'as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura', sans-serif;
+  background-color: #fffbf1;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1920px;
+    margin: auto;
+    width: 100%;
+  }
+}
+
+.social-icons a {
+  text-decoration: none;
+}

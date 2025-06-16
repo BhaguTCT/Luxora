@@ -1,0 +1,225 @@
+@use '../base/variables'as *;
+@use '../base/fonts'as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 28px 60px;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        &-left {
+            display: flex;
+            gap: 32px;
+
+            a {
+                color: black;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            img {
+                width: 120px;
+            }
+        }
+
+        &-right {
+            display: flex;
+            gap: 34px;
+            align-items: center;
+        }
+    }
+
+    &.scrolled {
+        background: #ffffff80;
+        backdrop-filter: blur(40px);
+    }
+}
+
+// MOBILE NAVIGATION
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100vh;
+    background: white;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    z-index: 999;
+
+    .close-btn {
+        font-size: 30px;
+        color: black;
+        background: none;
+        border: none;
+        align-self: flex-start;
+        cursor: pointer;
+    }
+
+}
+
+// Show mobile menu when active
+.mobile-nav.open {
+    transform: translateX(100%);
+}
+
+.mobile-header {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 22px 30px;
+    }
+    .nav {
+        position: relative;
+        z-index: 1000;
+    }
+
+    // Hamburger Menu
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        width: 30px;
+        height: 24px;
+        position: relative;
+        z-index: 1001;
+
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: black;
+            transition: 0.3s ease-in-out;
+        }
+
+        &.active {
+            span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -7px);
+            }
+        }
+    }
+
+    // Hide Logo & Cart Icon When Menu is Open
+    .logo.hide,
+    .carticon.hide,
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: #FAF6F2;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .mobile-header {
+        display: block;
+    }
+
+    .mobile-nav.open {
+        transform: translateX(100%);
+    }
+
+    .mobile-menu {
+        list-style: none;
+        padding: 0;
+        margin-bottom: auto;
+        margin-top: 60px;
+
+        li {
+            margin: 20px 0;
+
+            a {
+                text-decoration: none;
+                font-family: 'NewYork';
+                font-size: 32px;
+                line-height: 36px;
+                font-weight: $font-regular;
+                color: #000;
+            }
+        }
+    }
+
+    .mobile-footer {
+        position: absolute;
+        bottom: 40px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 40px;
+
+        .icon {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: black;
+            cursor: pointer;
+        }
+    }
+
+    .bottom-menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #FAF6F2;
+        padding: 15px 0;
+        border-top: 1px solid #D3D3D3;
+        width: 100%;
+    
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            color: #000;
+            font-weight: 500;
+            padding: 0 15px;
+        }
+    
+        .divider {
+            width: 1px;
+            height: 20px;
+            background: #A0A0A0;
+            margin: 0 15px;
+        }
+    }
+}

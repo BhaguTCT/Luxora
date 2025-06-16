@@ -1,0 +1,165 @@
+@use '../base/fonts'as *;
+@use '../base/variables'as *;
+
+footer {
+    padding: 56px 60px 38px;
+
+    @media (max-width: 768px) {
+        padding: 60px 30px 0;
+    }
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 50px;
+
+    .company {
+        width: 317px;
+    }
+}
+
+// Newsletter Section
+.newsletter {
+    flex: 1;
+    min-width: 300px;
+
+    .subscribe-box {
+        display: flex;
+        border: 1px solid $border-color;
+        width: 100%;
+        max-width: 300px;
+        margin: 23px 0 28px;
+
+        @media (max-width: 768px) {
+            max-width: 100%;
+            margin: 22px auto 28px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 0px 14px 16px;
+            border: none;
+            outline: none;
+            background: transparent;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: $font-regular;
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            padding-right: 22px;
+        }
+    }
+
+    .social-icons {
+        margin-top: 10px;
+        gap: 16px;
+        display: flex;
+
+        i {
+            font-size: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+// Footer Links
+.footer-links {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 400px;
+
+    .links-group {
+        display: flex;
+        gap: 80px;
+    }
+
+    h6 {
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 26px;
+        font-weight: $font-regular;
+    }
+
+    ul {
+        list-style: none;
+        gap: 22px;
+        display: grid;
+        @media (max-width: 768px) {
+            gap: 16px;
+        }
+
+        li {
+
+            a {
+                text-decoration: none;
+                color: $text-color;
+                font-size: 16px;
+                line-height: 22px;
+                font-weight: $font-regular;
+            }
+        }
+    }
+}
+
+// Footer Bottom Section
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 95px;
+    border-top: 1px solid $border-color;
+    padding-top: 24px;
+
+    .copyright {
+        font-size: 16px;
+        line-height: 22px;
+        font-family: 'NewYork';
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    #footer {
+        flex-direction: column;
+        text-align: left;
+        gap: 30px;
+    }
+
+    .footer-links {
+        justify-content: left;
+        min-width: auto;
+
+        h6 {
+            margin-bottom: 18px;
+        }
+
+        .links-group {
+            flex-direction: column;
+            align-items: start;
+            gap: 28px;
+        }
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        align-items: start;
+        margin-top: 36px;
+        padding-top: 22px;
+
+        p.copyright {
+            margin: 18px 0 36px;
+            font-size: 14px;
+        }
+    }
+}
